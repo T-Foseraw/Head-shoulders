@@ -1,0 +1,231 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+.container{
+    width: 1280px;
+
+    margin: auto;
+}
+.header {
+    width: 100%;
+    position: fixed;
+    background-color: palevioletred;   
+}
+.content {
+    width: 100%;
+    height: 1000px;
+    padding-top: 80px; 
+    margin-left: 20px;  
+}
+.footer {
+    width: 100%;
+    height: 200px;
+    background-color:  rgb(68, 147, 212);   
+}
+
+/* Menu */
+.nav {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: rgb(68, 147, 212);
+}
+.nav li{
+    float: left;
+}
+.nav li .menu-link{
+    display: block;
+    text-decoration: none;
+    padding: 25px 40px;
+    color: white;
+}
+.nav li .menu-link:hover{
+    background-color: rgb(31, 65, 92);
+}
+.logo{
+    padding: 15px 25px;
+}
+.logo img{
+    margin: 0px;
+    height: 35px;
+}
+
+/* Buscador */
+.ir{
+    float: right;
+    margin: 0px;
+    border: 1px solid rgb(122, 122, 122);
+    color: rgb(122, 122, 122);
+    width: 35px;
+    height: 24px;
+    left: -21px;
+    position: relative;
+    top: 20px;
+    cursor: pointer;
+}
+.search{
+    float: right;
+    height: 20px;
+    margin: 20px;
+    border: 1px solid rgb(122, 122, 122);
+    color: rgb(122, 122, 122);
+}
+
+.banner {
+    background-image: url('../img/ip.jpg');
+    height: 750px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.txt{
+    width: 1280px;
+    margin: auto;
+}
+.info {
+    width: 800px;
+}
+.img_home{
+    width: 500px;
+    float: right;
+    padding: 50px;
+}
+.img_dandruff{
+    width: 400px;
+    float: left;
+    padding: 50px;
+    opacity: 0.1;
+}
+.more{
+    display: none;
+    margin-right: 50px;
+}
+/* gallery */
+h3{
+    color: rgb(68, 147, 212);
+}
+h4{
+    text-align: center;
+    color: rgb(180, 149, 47);
+}
+ul{
+    list-style-type: circle;
+}
+.description{
+    display: none;
+    width: 250px;
+}
+.row{
+    display: flex;
+}
+.column{
+    padding: 15px 25px;
+    border: rgb(68, 147, 212) 1px solid;
+    border-radius: 30px;
+    margin: 25px;
+}
+.gallery {
+    width: 250px;
+    display: block;
+    margin: auto;
+
+}
+
+/* Formulario */
+.forms{
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    margin-top: 50px;
+}
+.formu{
+    height: 300px;
+    width: 400px;
+    border: rgb(68, 147, 212) 1px solid;
+    border-radius: 30px;
+    display: inline-block;
+    margin: 10px;
+}
+.signup{
+    height: 400px;
+    width: 400px;
+    border: rgb(68, 147, 212) 1px solid;
+    border-radius: 30px;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    z-index: 1;
+}
+.llenar{
+    display: block;
+    padding: 10px 0;
+    width: 300px;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: rgb(68, 147, 212) 1px solid;
+    margin-left: 20px;
+}
+.btn{
+    padding: 10px 35px;
+    margin: 15px;
+    color: white;
+    background-color: rgb(68, 147, 212);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgb(95, 171, 233);
+}
+.btn a{
+    text-decoration: none;
+    color: white;
+}
+.cancel{
+    display: none;
+}
+/* About us */
+
+.btn_us{
+    padding: 10px 35px;
+    margin: 15px;
+    color:  rgb(68, 147, 212);
+    border:solid 1px rgb(68, 147, 212);
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
+}
+b{
+    color: rgb(68, 147, 212);
+    font-weight: 300;
+}
+.img_history{
+    width: 400px;
+    float: right;
+}
+.history{
+    border:solid 1px rgb(68, 147, 212);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 50px;
+    display: none;
+}
+.philosophy{
+    border:solid 1px rgb(68, 147, 212);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 50px;
+    display: none;
+}
+.safety{
+    border:solid 1px rgb(68, 147, 212);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 50px;
+    display: none;
+}

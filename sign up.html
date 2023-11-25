@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" href="css/style.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <title>Sign up</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="menu">
+            <ul class="nav">
+                <li class="logo">
+                    <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+                </li>
+                <li><a class="menu-link" href="index.html">Home</a></li>
+                <li><a class="menu-link" href="Gallery.html">Gallery</a></li>
+                <li><a class="menu-link" href="About us.html">About us</a></li>
+                <li><a class="menu-link" href="Contact.html">Contact</a></li>
+                <button class="ir">Ir</button>
+                <input class="search" type="text" placeholder="Buscar...">
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+
+        <button class="btn" onclick="ver_form()">Sign up</button>
+        <button class="btn"><a href="Contact.html">Back</a></button>
+
+        <div id="ver" class="cancel">
+            <form name="signup" onsubmit="return validar()">
+                
+                <h2>Sign up</h2>
+                <input type="text" class="llenar" placeholder="Name" name="name" />
+                <input type="text" class="llenar" placeholder="Last name" name="last" />
+                <input type="email" class="llenar" placeholder="Email" name="email" />
+                <input type="password" class="llenar" placeholder="Password" name="pass" />
+                <input type="password" class="llenar" placeholder="Confirm password" name="c_pass" />
+                <button class="btn">Send</button>
+                <input type="button" value="cancel"class="btn" onclick="ocultar()">
+            </form>
+        </div>
+
+        <script>
+            // Mostrar y ocultar formulario de registro
+
+            function ver_form() {
+                document.getElementById("ver").className = "signup";
+
+            }
+            function ocultar() {
+                document.getElementById("ver").className = "cancel"; 
+            }
+
+            // Validar los campos del registro
+
+            function validar() {
+                var var_name = document.forms["signup"]["name"].value;
+                if (var_name == "") {
+                    alert("The 'Name' field must be completed.")
+                    return false
+                }
+                var var_last = document.forms["signup"]["last"].value;
+                if (var_last == "") {
+                    alert("The 'Last name' field must be completed.")
+                    return false
+                }
+                var var_email = document.forms["signup"]["email"].value;
+                if (var_email == "") {
+                    alert("The 'Email' field must be completed.")
+                    return false
+                }
+                var var_pass = document.forms["signup"]["pass"].value;
+                if (var_pass == "") {
+                    alert("The 'Password' field must be completed.")
+                    return false
+                }
+                var var_cpass = document.forms["signup"]["c_pass"].value;
+                if (var_cpass == "") {
+                    alert("You must confirm the password.")
+                    return false
+                }
+
+                //Hacer coincidir las contraseñas
+
+                function validar_pass() {
+                    if (var_pass != var_cpass) {
+                        alert("Passwords do not match.");
+                        return false
+                    }
+                    else {
+                        alert("Thank you for registering");
+                    }
+                }
+                validar_pass();
+            }
+        </script>
+    </div>
+</body>
+
+</html>

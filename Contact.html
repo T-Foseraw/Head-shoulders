@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" href="css/style.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <title>Contact</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="menu">
+            <ul class="nav">
+                <li class="logo">
+                    <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+                </li>
+                <li><a class="menu-link" href="index.html">Home</a></li>
+                <li><a class="menu-link" href="Gallery.html">Gallery</a></li>
+                <li><a class="menu-link" href="About us.html">About us</a></li>
+                <li><a class="menu-link" href="Contact.html">Contact</a></li>
+                <button class="ir">Ir</button>
+                <input class="search" type="text" placeholder="Buscar...">
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="forms">
+            <div class="formu">
+
+                <h2>Contact Me</h2>
+                <form name="comment" onsubmit="return validar()">
+                    <input type="text" class="llenar" placeholder="Name" name="name" />
+                    <input type="email" class="llenar" placeholder="Email" name="email" />
+                    <textarea class="llenar" placeholder="Comment"></textarea>
+                    <button id="boton" class="btn" onclick="ver_msg()">Send</button>
+    
+                    <div id="ver_msg" name="ver" class="cancel">
+                        <h4 class="f">Thank you for comment!</h4>
+                    </div>
+
+                </form>
+            </div>
+            <div class="formu">
+
+                <h2>Sign in</h2>
+                <form>
+                    <input type="email" class="llenar" placeholder="Email">
+                    <input type="password" class="llenar" placeholder="Password">
+                    <button class="btn">Login</button>
+                    <button class="btn"><a href="sign up.html">Sign up</a></button>
+                </form>
+            </div>
+        </div>
+        
+        <script>
+            //Mostrar mensaje
+
+            function ver_msg(){
+                document.getElementById("ver_msg").className = "f";
+            }
+
+            //validar los campos del formulario comentario
+
+            function validar() {
+                var var_name = document.forms["comment"]["name"].value;
+                if (var_name == "") {
+                    alert("The 'Name' field must be completed.")
+                    return false
+                }
+                var var_email = document.forms["comment"]["email"].value;
+                if (var_email == "") {
+                    alert("The 'Email' field must be completed.")
+                    return false
+                }
+            }
+        </script>
+    </div>
+</body>
+
+</html>
